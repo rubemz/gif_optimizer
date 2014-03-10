@@ -1,6 +1,7 @@
 # GifOptimizer
 
 This gem allows you to simply optimize gifs via gifsicle.
+Inspired by [image_optimizer](https://github.com/jtescher/image_optimizer).
 
 ## Installation
 
