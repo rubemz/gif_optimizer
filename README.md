@@ -34,7 +34,7 @@ $ gem install gif_optimizer
 #### Optimize:
 
 ```ruby
-GifOptimizer.Optimizer('path/to/file.gif').optimize
+GifOptimizer::Optimizer.new("path/to/file.gif").optimize
 ```
 
 ## Contributing
