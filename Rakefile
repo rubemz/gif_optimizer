@@ -2,6 +2,9 @@
 
 require 'rubygems'
 require 'bundler'
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
+require 'gif_optimizer'
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -21,6 +24,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{TODO: longer description of your gem}
   gem.email = "rubem.nakamura@gmail.com"
   gem.authors = ["Rubem Nakamura"]
+  gem.version = GifOptimizer::VERSION
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -41,7 +45,7 @@ task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = GifOptimizer::VERSION
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "gif_optimizer #{version}"
